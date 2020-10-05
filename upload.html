@@ -5,7 +5,21 @@
 <body>
 <!-- upload button -->
 <form action="/action_page.php">
-  <input type="file" id="myFile" name="filename">
+  <input type="file" id="files" name="filename">
   <input type="submit" onClick="myFunction()">
 </form>
+<script>
+// from an input element
+function myFunction {
+  var filesToUpload = input.files;
+  // from drag-and-drop
+  if (!file.type.match(/image.*/)) {
+    // this file is not an image.
+  } else {
+    function onDrop(e) {
+      filesToUpload = e.dataTransfer.files;
+    }
+  }
+}
+</script>
 </body>
